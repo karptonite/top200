@@ -1,7 +1,7 @@
 <?php
 
 $name= $argv[1];
-$year = $argv[2];
+$year = date( 'Y' );
 $lastyear = $year - 1;
 
 $fp = fopen( "{$name}top200csv_{$year}.csv", "r" );
@@ -24,10 +24,10 @@ $newlist = $blines[0] . "\r";
 $i = 0;
 for ($i=0; $i <= 199; $i++ ) 
 { 
-	$lastindex = $lines[$i][3];
+	$lastindex = trim( $lines[$i][3] );
 	if( is_numeric( $lastindex ) )
 	{
-	$newlist .= $blines[$lastindex] . "\r";
+		$newlist .= $blines[$lastindex] . "\r";
 	}
  }
 
