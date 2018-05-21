@@ -12,7 +12,7 @@ while ( $lines[] = fgetcsv( $fp ) )
 
 fclose( $fp );
 
-$fp = fopen( "/Users/karp/Documents/top200/{$name}_{$lastyear}plus.txt", "r" );
+$fp = fopen( "/Users/karp/Documents/git/top200/{$name}_{$lastyear}plus.txt", "r" );
 
 $line = fgets( $fp );
 fclose( $fp );
@@ -31,7 +31,7 @@ for ($i=0; $i <= 199; $i++ )
 	}
  }
 
-$newlistf = fopen( "/Users/karp/Documents/top200/{$name}newtop200_{$year}.txt", "w" );
+$newlistf = fopen( "/Users/karp/Documents/git/top200/{$name}newtop200_{$year}.txt", "w" );
 
 fwrite( $newlistf, $newlist );
 fclose( $newlistf );
